@@ -1,8 +1,10 @@
 menu.addEventListener('click',function(){
     header.classList.toggle('active');
-    setTimeout(() => {
-        nav.classList.toggle('active');
-    },0);
+    nav.classList.toggle('active');
+})
+header.addEventListener('click',function(){
+    header.classList.remove('active');
+    nav.classList.remove('active');
 })
 
 var swiper = new Swiper(".mySwiper", {
