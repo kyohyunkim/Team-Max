@@ -2,10 +2,6 @@ menu.addEventListener('click',function(){
     header.classList.toggle('active');
     nav.classList.toggle('active');
 })
-header.addEventListener('click',function(){
-    header.classList.remove('active');
-    nav.classList.remove('active');
-})
 
 var swiper = new Swiper(".mySwiper", {
 spaceBetween: 50,
