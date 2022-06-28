@@ -1,3 +1,10 @@
+menu.addEventListener('click',function(){
+    header.classList.toggle('active');
+    setTimeout(() => {
+        nav.classList.toggle('active');
+    },0);
+})
+
 var swiper = new Swiper(".mySwiper", {
 spaceBetween: 50,
 effect: "fade",
@@ -46,17 +53,4 @@ window.addEventListener("scroll", () => {
     aside_img.style.transform = `rotate(${-yy}deg)`;
     aside_img.style.transform = `rotate(${yy}deg)`;
     // ----------aside---------------------------------
-
-    var beforePosition = 0;
-    var afterPosition = document.documentElement.scrollTop;
-    if (afterPosition > 0) {
-        if(beforePosition < afterPosition ){
-            header.classList.add('active');
-            nav_text.classList.add('active');
-        }
-    } if(afterPosition < 50){
-        header.classList.remove('active');
-        nav_text.classList.remove('active');
-    }
-    beforePosition = afterPosition;
 });
