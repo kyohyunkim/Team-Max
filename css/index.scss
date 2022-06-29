@@ -10,6 +10,19 @@ body{max-width:475px;width:100%;margin:0 auto;text-align: center;position:relati
 img{width:100%;}
 html {
     scroll-behavior: smooth;
+    background-image: url("/img/bg.jpg");
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    width:100%;height:100%;
+    &::before{
+        content:"";
+        position: fixed;
+        width:100%;height:100%;
+        background-color: rgba(0,0,0,0.2);
+        backdrop-filter: blur(10px);
+        z-index: 2;
+    }
 }
 
 
@@ -48,7 +61,22 @@ header{
         transition: .5s;
         z-index: -1;
         &.active{opacity: 1;}
-        div{font-size: 30px;color:#fff;padding:20px 0;text-transform: uppercase;}
+        div{font-size: 30px;color:#fff;padding:20px 0;text-transform: uppercase;cursor: pointer;position: relative;}
+        div::after{
+            content:"";
+            position: absolute;
+            bottom:20px;left:0;
+            width:0%;height: 1px;
+            background-color: #fff;
+            transition: .5s;
+        }
+        div:hover::after{
+            content:"";
+            position: absolute;
+            bottom:20px;left:0;
+            width:100%;height: 1px;
+            background-color: #fff;
+        }
     }
 }
 
@@ -73,6 +101,7 @@ main{
                 font-weight: 600;
                 font-size: 40px;
             }
+            .orange{color: #ff5234;}
             span{font-size: 15px;letter-spacing:0.2px;}
         }
     }
@@ -96,7 +125,7 @@ main{
         -webkit-align-items: center;
         align-items: center;
 
-        p{
+        .number{
             position: absolute;
             bottom:25px;right:60px;
             font-size: 25px;font-weight: 500;color:#fff;
@@ -156,6 +185,7 @@ main{
 }
 
 footer{
+    background: rgb(242, 242, 242);
     padding-bottom: 40px;
     ul{
         padding:40px 20px 60px;text-align: left;
@@ -177,7 +207,7 @@ footer{
             }
             span{font-size: 15px;color:#b0b0b0;display: block;}
             img{width:20px;padding-left: 10px;}
-            img:nth-child(2){width:20px;padding-left: 10px;}
+            img:nth-child(2){width:20px;padding-left: 10px;transform: translateY(2px);}
         }
         .email{
             padding-top: 20px;
@@ -188,7 +218,7 @@ footer{
                 a{color:#000;}
             }
             span{font-size: 15px;color:#b0b0b0;display: block;}
-            img{width:20px;padding-left: 10px;}
+            img{width:20px;padding-left: 10px; transform: translateY(2px);}
         }
         .site{
             padding-top: 20px;
@@ -199,7 +229,7 @@ footer{
                 a{color:#000;}
             }
             span{font-size: 15px;color:#b0b0b0;display: block;}
-            img{width:20px;padding-left: 10px;}
+            img{width:20px;padding-left: 10px; transform: translateY(2px);}
         }
     }
 }
