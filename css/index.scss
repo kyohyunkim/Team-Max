@@ -289,5 +289,15 @@ footer{
             }
         }
     }
+
+    .page{
+        padding: 20px 0 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .number{font-size: 15px; transform: translateY(-1px);padding: 0 10px;}
+        .left{width:10px;}
+        .right{width:10px;}
+    }
     
 }
