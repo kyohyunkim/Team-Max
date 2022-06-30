@@ -21,46 +21,33 @@
             </div>
         </header>
         
-        <main>
-            <div class="swiper mySwiper">
-                <div class="number">/ 3</div>
-                
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide banner1"><img src="https://kyohyunkim.github.io/Team-Max/img/6.jpeg"><p class="number">1</p><div class="title"><p>TEAM MAX</p><span>Amateur Basketball Team</span></div></div>
-                    <div class="swiper-slide banner2"><img src="https://kyohyunkim.github.io/Team-Max/img/5.jpeg"><p class="number">2</p><div class="title"><p class="orange">TEAM MAX</p><span class="orange">Amateur Basketball Team</span></div></div>
-                    <div class="swiper-slide banner3"><img src="https://kyohyunkim.github.io/Team-Max/img/7.jpeg"><p class="number">3</p><div class="title"><p>TEAM MAX</p><span>Amateur Basketball Team</span></div></div>
+        <main class="main_photo">
+            <div class="wrap">
+                <div class="title">
+                    <div>Photo</div>
+                    <ul>
+                        <li id="img_btn1">1 <img src="https://kyohyunkim.github.io/Team-Max/img/icon_home_shop_arrow_black.svg"></li>
+                        <li id="img_btn2">2 <img src="https://kyohyunkim.github.io/Team-Max/img/icon_home_shop_arrow_black.svg"></li>
+                    </ul>
                 </div>
-                <div class="swiper-pagination"></div>
-            </div>
-
-            <ul class="about" onclick="location.href='about.html';">
-                <div class="title"><p>About us</p> <img src="https://kyohyunkim.github.io/Team-Max/img/icon_home_shop_arrow_black.svg"></div>
-                <li class="about_img1"><img src="https://kyohyunkim.github.io/Team-Max/img/8.jpeg"></li>
-                <ul class="text">
-                    <li></li>
-                </ul>
-            </ul>
-
-            <ul class="photo" onclick="location.href='photo.html';">
-                <div class="title"><p>Photo</p> <img src="https://kyohyunkim.github.io/Team-Max/img/icon_home_shop_arrow_black.svg"></div>
-                <li class="about_img1"><img src="https://kyohyunkim.github.io/Team-Max/img/10.jpeg"></li>
-                <ul class="text">
-                    <li></li>
-                </ul>
-            </ul>
-
-            <ul class="video" onclick="location.href='video.html';">
-                <div class="title"><p>Video</p> <img src="https://kyohyunkim.github.io/Team-Max/img/icon_home_shop_arrow_black.svg"></div>
-                <li class="about_img1"><img src="https://kyohyunkim.github.io/Team-Max/img/11.jpeg"><p class="play_btn"><img src="https://kyohyunkim.github.io/Team-Max/img/play_w.svg"></p></li>
-                <ul class="text">
-                    <li></li>
-                </ul>
-            </ul>
-            <div class="top_btn">
-                <a href="#">
-                    <img class="aside_arrow" src="https://kyohyunkim.github.io/Team-Max/img/aside_arrow.svg">
-                    <img class="aside_img" id="aside_img" src="https://kyohyunkim.github.io/Team-Max/img/aside.svg">
-                </a>
+                <div class="img_box">
+                    <div class="box">
+                        <div class="img"></div>
+                        <div class="day"><span>&#8226;</span><span>xxxx.xx.xx</span></div>
+                    </div>
+                    <div class="box">
+                        <div class="img"></div>
+                        <div class="day"><span>&#8226;</span><span>xxxx.xx.xx</span></div>
+                    </div>
+                    <div class="box">
+                        <div class="img"></div>
+                        <div class="day"><span>&#8226;</span><span>xxxx.xx.xx</span></div>
+                    </div>
+                    <div class="box">
+                        <div class="img"></div>
+                        <div class="day"><span>&#8226;</span><span>xxxx.xx.xx</span></div>
+                    </div>
+                </div>
             </div>
         </main>
 
@@ -89,6 +76,26 @@
             </div>
         </footer>
     </div>
+    <script>
+        const box = document.querySelectorAll('.img_box .box');
+        const img = document.querySelectorAll('.img_box .img');
+        img_btn1.addEventListener('click',function(){
+            for(let i=0; i < box.length; i++){
+                box[i].classList.add('active');
+            }
+        })
+        img_btn2.addEventListener('click',function(){
+            for(let i=0; i < box.length; i++){
+                box[i].classList.remove('active');
+            }
+        })
+
+        for(let a=0; a < img.length; a++){
+            img[a].addEventListener('click',function(){
+                box[a].classList.toggle('active');
+            })
+        }
+    </script>
     <script defer src="./js/index.js"></script>
     <script defer src="./js/jquery-3.6.0.min.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
