@@ -10,19 +10,6 @@ body{max-width:475px;width:100%;margin:0 auto;text-align: center;position:relati
 img{width:100%;}
 html {
     scroll-behavior: smooth;
-    background-image: url("/img/bg.jpg");
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
-    width:100%;height:100%;
-    &::before{
-        content:"";
-        position: fixed;
-        width:100%;height:100%;
-        background-color: rgba(0,0,0,0.2);
-        backdrop-filter: blur(10px);
-        z-index: 2;
-    }
 }
 
 
