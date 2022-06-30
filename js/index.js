@@ -1,17 +1,17 @@
 menu.addEventListener('click',function(){
     header.classList.toggle('active');
     nav.classList.toggle('active');
+    console.log(header.classList[0]);
 })
-
-nav.addEventListener('click',function(){
-    header.classList.remove('active');
-    nav.classList.remove('active');
-})
-
+    nav.addEventListener('click',function(){
+        header.classList.remove('active');
+        nav.classList.remove('active');
+    })
 var swiper = new Swiper(".mySwiper", {
 spaceBetween: 50,
 effect: "fade",
 speed: 600,
+loop: true,
 autoplay: {
     delay: 2500,
     disableOnInteraction: false,

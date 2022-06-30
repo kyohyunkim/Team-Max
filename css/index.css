@@ -29,6 +29,23 @@ img {
 
 html {
   scroll-behavior: smooth;
+  background-image: url("/img/bg.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+html::before {
+  content: "";
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  z-index: 2;
 }
 
 .body_wrap {
@@ -116,6 +133,30 @@ header .nav div {
   color: #fff;
   padding: 20px 0;
   text-transform: uppercase;
+  cursor: pointer;
+  position: relative;
+}
+
+header .nav div::after {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: #fff;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+header .nav div:hover::after {
+  content: "";
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #fff;
 }
 
 main {
@@ -153,6 +194,10 @@ main .swiper .title p {
   font-size: 40px;
 }
 
+main .swiper .title .orange {
+  color: #ff5234;
+}
+
 main .swiper .title span {
   font-size: 15px;
   letter-spacing: 0.2px;
@@ -174,7 +219,7 @@ main .swiper-slide {
   align-items: center;
 }
 
-main .swiper-slide p {
+main .swiper-slide .number {
   position: absolute;
   bottom: 25px;
   right: 60px;
@@ -309,6 +354,7 @@ main .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
 }
 
 footer {
+  background: #f2f2f2;
   padding-bottom: 40px;
 }
 
@@ -361,6 +407,8 @@ footer .my .insta img {
 footer .my .insta img:nth-child(2) {
   width: 20px;
   padding-left: 10px;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
 }
 
 footer .my .email {
@@ -390,6 +438,8 @@ footer .my .email span {
 footer .my .email img {
   width: 20px;
   padding-left: 10px;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
 }
 
 footer .my .site {
@@ -419,6 +469,8 @@ footer .my .site span {
 footer .my .site img {
   width: 20px;
   padding-left: 10px;
+  -webkit-transform: translateY(2px);
+          transform: translateY(2px);
 }
 
 .top_btn {
