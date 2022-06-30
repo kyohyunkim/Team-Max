@@ -46,9 +46,9 @@ header {
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.6);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.8);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
   height: 50px;
   -webkit-transition: .5s;
   transition: .5s;
@@ -491,8 +491,14 @@ footer .my .site img {
   opacity: 1;
 }
 
+.main_about .main_about_img {
+  height: 350px;
+  overflow: hidden;
+  margin-top: 50px;
+}
+
 .main_about .wrap {
-  padding: 70px 20px;
+  padding: 20px 20px 100px;
   text-align: left;
 }
 
